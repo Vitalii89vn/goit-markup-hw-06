@@ -288,7 +288,6 @@ li {
 
   transition: opacity 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -299,8 +298,8 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-height: 56.74%; /*581px   56,74%*/
-  min-width: 33%; /*528px   33.00%*/
+  min-height: 200px; /*581px   56,74%*/
+  min-width: 528px; /*528px   33.00%*/
   background-color: var(--second-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -328,9 +327,53 @@ li {
   background: var(--second-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-close-icon {
   fill: #000000;
+}
+.btn-close-item:hover .btn-close-icon {
+  fill: var(--color-hover-focus);
+}
+.modal-title {
+  font-size: 20px;
+  line-height: 1.15;
+  margin-top: 2px;
+  margin-bottom: 12px;
+}
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.form-name {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 42px;
+}
+.form-field {
+  position: relative;
+}
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.form-name:focus,
+.form-name:hover {
+  outline: none;
+  border: 1px solid var(--color-hover-focus);
+}
+.form-name:focus + .icon-form,
+.form-name:hover + .icon-form {
+  fill: var(--color-hover-focus);
 }
 /*--------------------our-comand--------------------*/
 
@@ -508,6 +551,42 @@ li {
 .social-list-item-footer:not(:last-child) {
   margin-right: 10px;
 }
+.footer-input {
+  margin-left: 93px;
+}
+.footer-input-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot-input-mail {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 1.42;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--background-color-footer);
+}
+.btn-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: 12px;
+}
+.icon-send {
+  fill: var(--second-text-color);
+  margin-left: 10px;
+}
+
 /*-----------------PORTFOLIO----------*/
 
 .btn-product {
